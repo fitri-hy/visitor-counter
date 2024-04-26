@@ -1,7 +1,5 @@
 # API Visitor Counter Node JS
 
-## Get Started
-
 Installing
 ```
 git clone https://github.com/fitri-hy/visitor-counter.git
@@ -10,7 +8,7 @@ npm i hy-visitor-counter
 node index.js
 ```
 
-##Get Started
+## Get Started
 
 #### Import Modules
 ```
