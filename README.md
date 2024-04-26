@@ -2,17 +2,22 @@
 
 ## Get Started
 
-Install Modules
+Installing
 ```
+git clone https://github.com/fitri-hy/visitor-counter.git
+cd visitor-counter
 npm i hy-visitor-counter
+node index.js
 ```
 
-## Import Modules
+##Get Started
+
+#### Import Modules
 ```
 const visitorCounter = require('hy-visitor-counter');
 ```
 
-## Create Middleware to Process Request
+#### Create Middleware to Process Request
 ```
 app.use((req, res, next) => {
     visitorCounter.incrementVisitor(req);
@@ -20,7 +25,7 @@ app.use((req, res, next) => {
 });
 ```
 
-## Create Middleware Total Visitors
+#### Create Middleware Total Visitors
 ```
 app.use((req, res, next) => {
     res.locals.totalVisitors = visitorCounter.getVisitorCount();
@@ -28,7 +33,7 @@ app.use((req, res, next) => {
 });
 ```
 
-## Endpoint Visitors
+#### Endpoint Visitors
 ```
 app.get('/api/visitors', (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -48,7 +53,7 @@ app.get('/api/visitors', (req, res) => {
 });
 ```
 
-## Endpoint Daily Visitors
+#### Endpoint Daily Visitors
 ```
 app.get('/api/stats/daily', (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -70,7 +75,7 @@ app.get('/api/stats/daily', (req, res) => {
 });
 ```
 
-## Endpoint Weekly Visitors
+#### Endpoint Weekly Visitors
 ```
 app.get('/api/stats/weekly', (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -92,7 +97,7 @@ app.get('/api/stats/weekly', (req, res) => {
 });
 ```
 
-## Endpoint Monthly Visitors
+#### Endpoint Monthly Visitors
 ```
 app.get('/api/stats/monthly', (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -114,7 +119,7 @@ app.get('/api/stats/monthly', (req, res) => {
 });
 ```
 
-## Endpoint Annually Visitors
+#### Endpoint Annually Visitors
 ```
 app.get('/api/stats/yearly', (req, res) => {
     const page = parseInt(req.query.page) || 1;
